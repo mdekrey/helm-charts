@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  single-container:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-03-14T12:32:39.514234409Z"
+    description: A Helm chart for Kubernetes
+    digest: 8f0f985dd4588766047d12401729f9e28dc5d3f7674fb60a536323eafbc812d5
+    name: single-container
+    type: application
+    urls:
+    - https://github.com/mdekrey/helm-charts/releases/download/single-container-0.1.0/single-container-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-14T12:32:39.241514837Z"
