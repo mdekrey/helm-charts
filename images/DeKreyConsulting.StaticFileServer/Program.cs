@@ -36,6 +36,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
+app.UseStatusCodePagesWithReExecute("/{0}.html");
 app.UseCompressedStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx =>
