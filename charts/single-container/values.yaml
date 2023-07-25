@@ -33,6 +33,9 @@ podspec: {}
 
 podAnnotations: {}
 
+podLabels: {}
+  # Added for use with azure-workload-identity
+
 podSecurityContext: {}
   # fsGroup: 2000
 
