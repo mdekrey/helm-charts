@@ -42,3 +42,9 @@ To install this chart (Powershell Core):
         --set-string "image.tag=$imageTag" `
         --set-string "ingress.annotations.cert-manager\.io/cluster-issuer=$sslClusterIssuer" `
         --set-string "ingress.hosts[0].host=$domain"
+
+### Namecheap Cert-Manager hooks
+
+Deploy the webhook:
+
+    helm install -n cert-manager namecheap-webhook --repo https://mdekrey.github.io/helm-charts cert-manager-webhook-namecheap
