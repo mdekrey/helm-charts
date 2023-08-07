@@ -53,9 +53,9 @@ service:
 
 ingress:
   enabled: true
-  ingressClassName: defaultIngressClass
-  annotations:
-    acme.cert-manager.io/http01-edit-in-place: "true"
+  # ingressClassName: ingressClassNmae
+  # annotations:
+  #   acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
     - host: chart-example.local
       paths:
