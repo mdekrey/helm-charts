@@ -45,6 +45,40 @@ To install this chart (Powershell Core):
 
 ### Namecheap Cert-Manager hooks
 
+Originally from [kelvie/cert-manager-webhook-namecheap](https://github.com/kelvie/cert-manager-webhook-namecheap), from [cert-manager-webhook-namecheap](https://github.com/jamesgoodhouse/cert-manager-webhook-namecheap).
+
 Deploy the webhook:
 
     helm install -n cert-manager namecheap-webhook --repo https://mdekrey.github.io/helm-charts cert-manager-webhook-namecheap
+
+Deploy the issuer:
+
+    helm install --set email=yourname@example.com -n cert-manager letsencrypt-namecheap-issuer deploy/letsencrypt-namecheap-issuer/
+
+In NameCheap, go to Profile -> Tools and set up API access. (Note that you'll need to whitelist the public IP of the k8s cluster to use the webhook), and set the secret:
+
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: namecheap-credentials
+      namespace: cert-manager
+    type: Opaque
+    stringData:
+      apiKey: my_api_key_from_namecheap
+      apiUser: my_username_from_namecheap
+
+Create a staging certificate for testing:
+
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: wildcard-cert-stage
+      namespace: default
+    spec:
+      secretName: wildcard-cert-stage
+      commonName: "*.<domain>"
+      issuerRef:
+        kind: ClusterIssuer
+        name: letsencrypt-stage
+      dnsNames:
+      - "*.<domain>"
