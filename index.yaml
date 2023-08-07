@@ -1,6 +1,37 @@
 apiVersion: v1
 entries:
+  cert-manager-webhook-namecheap:
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2023-08-07T00:27:12.986185062Z"
+    description: Namecheap Webhook for Cert Manager
+    digest: 444cd1d8ed3db760072ec21eeed127e7215c0244abe6867d2870b2957d6f8dc4
+    name: cert-manager-webhook-namecheap
+    urls:
+    - https://github.com/mdekrey/helm-charts/releases/download/cert-manager-webhook-namecheap-0.1.0/cert-manager-webhook-namecheap-0.1.0.tgz
+    version: 0.1.0
+  letsencrypt-namecheap-issuer:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-07T00:27:13.165034969Z"
+    description: A Helm chart for Kubernetes
+    digest: ad42bc0eaf8c4161d715014179f5b9a3feb747f9149a1b391d1dd356d8d38f43
+    name: letsencrypt-namecheap-issuer
+    type: application
+    urls:
+    - https://github.com/mdekrey/helm-charts/releases/download/letsencrypt-namecheap-issuer-0.1.0/letsencrypt-namecheap-issuer-0.1.0.tgz
+    version: 0.1.0
   single-container:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-08-07T00:27:13.449574813Z"
+    description: A Helm chart for Kubernetes
+    digest: ee7c00a8ee5e6cf9cde841aa809b6e4f850e393565ddc5198700db2f315370d0
+    name: single-container
+    type: application
+    urls:
+    - https://github.com/mdekrey/helm-charts/releases/download/single-container-0.2.1/single-container-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-07-25T23:26:29.604867933Z"
@@ -41,4 +72,4 @@ entries:
     urls:
     - https://github.com/mdekrey/helm-charts/releases/download/single-container-0.1.0/single-container-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-14T12:32:39.241514837Z"
+generated: "2023-08-07T00:27:13.449608412Z"
