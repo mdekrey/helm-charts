@@ -63,6 +63,7 @@ ingress:
   tls:
     enabled: true
     # secretName: example-tls-name
+    # noSecret: false
 
 resources: {}
   # limits:
