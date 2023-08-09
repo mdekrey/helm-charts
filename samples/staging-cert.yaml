@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-cert-stage
+  namespace: default
+spec:
+  secretName: wildcard-cert-stage
+  commonName: "*.example.com"
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-stage
+  dnsNames:
+  - "*.example.com"

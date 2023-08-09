@@ -30,6 +30,14 @@ podspec: {}
 #       secretKeyRef:
 #           key: BlobStorage
 #           name: environment-settings
+# livenessProbe:
+#   httpGet:
+#     path: /health
+#     port: http
+# readinessProbe:
+#   httpGet:
+#     path: /health
+#     port: http
 
 podAnnotations: {}
 
